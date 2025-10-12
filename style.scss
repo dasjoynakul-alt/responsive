@@ -1,0 +1,158 @@
+:root {
+  --gray: #212121;
+  --green: #009660;
+  --white: #e9e9e9;
+  --black: #0c0c0c;
+}
+
+
+@font-face {
+  font-family: Neue;
+  src: url(./NeueMachina-Light_gwWCZxVuQl.ttf);
+}
+
+@font-face {
+  font-family: hal;
+  src: url(./HelveticaNowDisplay-Regular_5Mzhp8KlA8_CAVTbnsPOM.woff2);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+}
+
+@mixin display($align-items, $justify-content) {
+  display: flex;
+  align-items: $align-items;
+  justify-content: $justify-content;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: 10px 20px;
+}
+
+nav {
+  @include display(center, space-between);
+  padding: 15px 70px;
+  position: fixed;
+  width: 100%;
+
+
+  .nav1 {
+    @include display(flex-end, space-between);
+    gap: 20px;
+
+    h4 {
+      font-size: 18px;
+      font-family: neue;
+      font-weight: 100;
+    }
+
+    img {
+      height: 50px;
+      line-height: 1.1
+    }
+  }
+
+  .nav2 {
+    @include display(center, center);
+    cursor: pointer;
+    gap: 80px;
+
+
+    h4 {
+      font-family: Neue;
+      font-size: 16px;
+      font-weight: 100;
+
+      i {
+        font: 20px;
+      }
+    }
+
+    img {
+      height: 30px;
+      border-radius: 50px 40px;
+      width: 25px;
+      cursor: pointer;
+    }
+  }
+
+  .nav3 {
+    cursor: pointer;
+    align-items: center;
+    gap: 30px;
+    display: none;
+
+    h4 {
+      font-family: hal;
+      font-size: 16px;
+
+      i {
+        font-size: 20px;
+      }
+
+    }
+
+    img {
+      height: 28px;
+      border-radius: 50%;
+      width: 28px;
+    }
+  }
+
+}
+
+@media (max-width:600px) {
+  nav {
+    padding: 13px 20px;
+
+    .nav1 {
+      h4 {
+        font-size: 14px;
+      }
+
+      img {
+        height: 30px;
+      }
+    }
+
+    .nav2 {
+      display: none;
+    }
+
+    .nav3 {
+      display: flex;
+    }
+
+  }
+}
+
+main {
+  padding-top: 100px;
+
+  .section1 {
+    @include display(flex-start, space-between);
+    padding: 15px 70px;
+    font-family: hal;
+
+    .left {
+      background-color: red;
+      width: 45%;
+
+      font-size: px;
+    }
+
+    .right {
+      background-color: red;
+      width: 45%;
+      }
+    }
+  }

@@ -1,0 +1,136 @@
+:root {
+  --gray: #212121;
+  --green: #009660;
+  --white: #e9e9e9;
+  --black: #0c0c0c;
+}
+
+@font-face {
+  font-family: Neue;
+  src: url(./NeueMachina-Light_gwWCZxVuQl.ttf);
+}
+@font-face {
+  font-family: hal;
+  src: url(./HelveticaNowDisplay-Regular_5Mzhp8KlA8_CAVTbnsPOM.woff2);
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  color: var(--white);
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  background-color: var(--black);
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 10px 20px;
+  padding: 15px 70px;
+  position: fixed;
+  width: 100%;
+}
+nav .nav1 {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 10px 20px;
+  gap: 20px;
+}
+nav .nav1 h4 {
+  font-size: 18px;
+  font-family: neue;
+  font-weight: 100;
+}
+nav .nav1 img {
+  height: 50px;
+  line-height: 1.1;
+}
+nav .nav2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 10px 20px;
+  cursor: pointer;
+  gap: 80px;
+}
+nav .nav2 h4 {
+  font-family: Neue;
+  font-size: 16px;
+  font-weight: 100;
+}
+nav .nav2 h4 i {
+  font: 20px;
+}
+nav .nav2 img {
+  height: 30px;
+  border-radius: 50px 40px;
+  width: 25px;
+  cursor: pointer;
+}
+nav .nav3 {
+  cursor: pointer;
+  align-items: center;
+  gap: 30px;
+  display: none;
+}
+nav .nav3 h4 {
+  font-family: hal;
+  font-size: 16px;
+}
+nav .nav3 h4 i {
+  font-size: 20px;
+}
+nav .nav3 img {
+  height: 28px;
+  border-radius: 50%;
+  width: 28px;
+}
+
+@media (max-width: 600px) {
+  nav {
+    padding: 13px 20px;
+  }
+  nav .nav1 h4 {
+    font-size: 14px;
+  }
+  nav .nav1 img {
+    height: 30px;
+  }
+  nav .nav2 {
+    display: none;
+  }
+  nav .nav3 {
+    display: flex;
+  }
+}
+main {
+  padding-top: 100px;
+}
+main .section1 {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 10px 20px;
+  padding: 15px 70px;
+  font-family: hal;
+}
+main .section1 .left {
+  background-color: red;
+  width: 45%;
+  font-size: px;
+}
+main .section1 .right {
+  background-color: red;
+  width: 45%;
+}/*# sourceMappingURL=style.css.map */
