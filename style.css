@@ -3,11 +3,16 @@
   --green: #009660;
   --white: #e9e9e9;
   --black: #0c0c0c;
+  --lgray: #929292;
 }
 
 @font-face {
   font-family: Neue;
   src: url(./NeueMachina-Light_gwWCZxVuQl.ttf);
+}
+@font-face {
+  font-family: bold;
+  src: url(./HelveticaNowDisplay-Bold_VMHV5twUMR.ttf);
 }
 @font-face {
   font-family: hal;
@@ -18,6 +23,9 @@
   padding: 0;
   box-sizing: border-box;
   color: var(--white);
+  -webkit-user-select: none;
+     -moz-user-select: none;
+          user-select: none;
 }
 
 html,
@@ -25,6 +33,14 @@ body {
   height: 100%;
   width: 100%;
   background-color: var(--black);
+}
+
+.green {
+  color: var(--green);
+}
+
+.gray {
+  color: var(--gray);
 }
 
 nav {
@@ -126,11 +142,170 @@ main .section1 {
   font-family: hal;
 }
 main .section1 .left {
-  background-color: red;
-  width: 45%;
-  font-size: px;
+  width: 42%;
 }
-main .section1 .right {
-  background-color: red;
+main .section1 .left h1 {
+  font-size: 48px;
+}
+main .section1 .left .tags {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 10px 20px;
+  gap: 5px 5px;
+  margin: 30px 0;
+  flex-wrap: wrap;
+}
+main .section1 .left .tags h4 {
+  padding: 10px 20px;
+  border-radius: 4px;
+  white-space: nowrap;
+  background-color: var(--gray);
+}
+main .section1 .left .price {
+  font-size: 35px;
+}
+main .section1 .left .price .green {
+  color: var(--green);
+}
+main .section1 .left .price .lgray {
+  color: var(--lgray);
+  font-size: 29px;
+  font-weight: 800;
+}
+main .section1 .left .cta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+main .section1 .left .cta button {
+  background: var(--green);
+  padding: 20px 50px;
+  border-radius: 5px;
+  border: none;
+  font-size: 20px;
+}
+main .section1 .left .cta button:nth-child(2) {
+  background-color: var(--gray);
+}
+main .section1 .right .right-in {
+  width: 600px;
+  border-radius: 5px;
+  overflow: hidden;
+}
+main .section1 .right .right-in .image {
+  width: 100%;
+  height: 350px;
+}
+main .section1 .right .right-in .image img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  height: 100%;
+}
+main .section1 .right .right-in .image-bottom {
+  padding: 10px;
+  padding-top: 40px;
+  background-color: var(--gray);
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+main .section1 .right .right-in .image-bottom h4 {
+  background-color: #151515;
+  padding: 10px 15px;
+  border-radius: 5px;
   width: 45%;
+}
+main .section1 .right .right-in .image-bottom h4 span {
+  color: var(--green);
+}
+main .section2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  font-weight: 10px 20px;
+  padding: 120px 70px;
+  flex-direction: column;
+}
+main .section2 h1 {
+  font-family: hal;
+  font-size: 120px;
+  background-image: url("https://ik.imagekit.io/sheryians/Aptitude%20&%20Reasoning/mask%20Large_ZB4lGN8hWZ.png");
+  background-size: cover;
+  -webkit-background-clip: text;
+          background-clip: text;
+  position: relative;
+  color: transparent;
+}
+main .section2 .bloom {
+  position: absolute;
+  filter: blur(80px);
+}
+main .section2 h3 {
+  font-family: hal;
+  font-size: 50px;
+  text-transform: capitalize;
+  letter-spacing: -1px;
+}
+
+@media (max-width: 1400px) {
+  main .section1 .left h1 {
+    font-size: 3.5vw;
+  }
+}
+@media (max-width: 800px) {
+  main {
+    padding-top: 50px;
+  }
+  main .section1 {
+    flex-direction: column-reverse;
+    padding: 15px 5vw;
+  }
+  main .section1 .left {
+    width: 100%;
+    margin-top: 30px;
+  }
+  main .section1 .left h1 {
+    font-size: 33px;
+  }
+  main .section1 .right .right-in {
+    width: 100%;
+  }
+  main .section1 .right .right-in .image {
+    width: 100%;
+    height: 50vw;
+  }
+  main .section1 .right .right-in .image-bottom {
+    padding: 10px;
+    padding-top: 25px;
+    gap: 8px;
+  }
+  main .section1 .right .right-in .image-bottom h4 {
+    background-color: #151515;
+    padding: 6px 12px;
+    border-radius: 5px;
+    font-size: 2.5vw;
+    width: 45%;
+  }
+}
+@media (max-width: 600px) {
+  main .section1 .left h1 {
+    font-size: 5vw;
+  }
+}
+@media (max-width: 900) {
+  main .section2 h1 {
+    white-space: nowrap;
+    font-size: 15vw;
+  }
+  main .section2 h3 {
+    text-align: center;
+    font-size: 4vw;
+  }
 }/*# sourceMappingURL=style.css.map */
