@@ -372,8 +372,14 @@ border: none;
 border-radius: 25px;
 background: #282860;
 color: #fff;
+outline: none;
 font-size: 16px;
 width: 100%;
+transition: all 0.3s ease;
+}
+
+.input-group input:focus{
+    box-shadow: 0 0 5px rgba(155, 89, 182, 0.7);
 }
 
 .input-group i {
